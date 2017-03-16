@@ -1,0 +1,12 @@
+<div class="inputWrapper">
+  <input type="text" [(ngModel)]="newTask" (keyup.enter)="addTask(newTask)">
+</div>
+<!--{{newTask}}<br>-->
+
+<task *ngFor="let task of tasks; let i=index"
+      [text]="task.text"
+      [checked]="task.checked"
+      [id]="task.id"
+      (deleteTask)="deleteTask($event)"
+      (changeState)="changeState($event)"
+></task>

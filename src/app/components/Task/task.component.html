@@ -1,0 +1,8 @@
+<div class="task" (click)="change()">
+  <!--<input   type="checkbox" (change)="changeState()">-->
+  <div class="textWrapper">
+    <div [class.done]="checked" class="text">{{text}}</div>
+  </div>
+  <div (click)="delete(id)" class="deleteButton">X</div>
+
+</div>
